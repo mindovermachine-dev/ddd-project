@@ -1,0 +1,14 @@
+{
+  "name": "MoM's Manifest",
+  "private": true,
+  "scripts": {
+    "install:repo": "npm install",
+    "write-version": "printf 'Build from %s\\nRef: %s\\nCommit: %s\\n' \"${BUILD_REPO:-$(git remote get-url origin)}\" \"${BUILD_REF:-$(git branch --show-current)}\" \"${BUILD_SHA:-$(git rev-parse HEAD)}\" > version.txt"
+  },
+  "devDependencies": {
+    "cspell": "^6.28.0",
+    "markdownlint-cli2": "^0.11.0",
+    "prettier": "^3.6.2",
+    "@cspell/dict-da-dk": "^1.0.0"
+  }
+}
